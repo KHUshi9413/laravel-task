@@ -9,6 +9,11 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ProjectController;
 
+
+Route::get('/', function () {
+    return redirect()->route('register.form');
+});
+
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
