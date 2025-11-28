@@ -11,7 +11,7 @@ use App\Http\Controllers\ProjectController;
 
 
 Route::get('/', function () {
-    return redirect()->route('register.form');
+    return redirect()->route('login');
 });
 //login routes 
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
